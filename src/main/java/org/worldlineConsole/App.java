@@ -1,13 +1,23 @@
 package org.worldlineConsole;
 
-/**
- * Hello world!
- *
- */
-public class App 
+import com.six.timapi.*;
+import com.six.timapi.constants.*;
+
+public class App
 {
-    public static void main( String[] args )
+    public static void main ( String[] args ) throws TimException
     {
-        System.out.println( "Hello World!" );
+        TerminalSettings settings = new TerminalSettings();
+        settings.setTerminalId("12345678");
+        settings.setAutoCommit(false);
+        settings.setIntegratorId("0e6b1705-ab96-455b-9ba3-a77dd919d7a5");
+        Terminal terminal = new com.six.timapi.Terminal(settings);
+
+        // Check if the terminal is ready to receive a transaction
+        if(terminal.getTerminalStatus().getTransactionStatus() == TransactionStatus.IDLE)
+        {
+            TransactionResponse response = terminal.transaction(TransactionType.PURCHASE, new Amount( 14.00, Currency.CHF));
+            //terminal.transactionAsync(TransactionType.PURCHASE, new Amount(14.00, Currency.CHF));
+        }
     }
 }

@@ -21,5 +21,11 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>com.Timapi</groupId>
+      <artifactId>Timapi</artifactId>
+      <version>1.0</version>
+    </dependency>
   </dependencies>
 </project>
