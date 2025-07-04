@@ -7,7 +7,6 @@ public class App
 {
     public static void main ( String[] args ) throws TimException
     {
-        // Create terminal settings instance
         TerminalSettings settings = new TerminalSettings();
         settings.setTerminalId("25496444");
         settings.setAutoCommit(false);
