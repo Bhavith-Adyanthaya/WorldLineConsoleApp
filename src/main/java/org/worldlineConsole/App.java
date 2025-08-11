@@ -13,6 +13,7 @@ public class App
         // Test comment 3
         // test comment
         // test Comment 4
+        // test comment 5
         settings.setIntegratorId("0e6b1705-ab96-455b-9ba3-a77dd919d7a5");
         Terminal terminal = new com.six.timapi.Terminal(settings);
 
