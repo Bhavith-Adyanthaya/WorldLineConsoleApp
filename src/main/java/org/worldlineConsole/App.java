@@ -12,7 +12,9 @@ public class App
         settings.setAutoCommit(false);
 
         settings.setIntegratorId("0e6b1705-ab96-455b-9ba3-a77dd919d7a5");
-        Terminal terminal = new com.six.timapi.Terminal(settings);
+        Terminal terminal = new com.six.timapi.Terminal(settings);\
+
+        // temp comments
 
         // Check if the terminal is ready to receive a transaction
         if(terminal.getTerminalStatus().getTransactionStatus() == TransactionStatus.IDLE)
